@@ -1,6 +1,7 @@
-open Spotlib.Spot
 open Util
 open Http
+
+external (&) : ('a -> 'b) -> 'a -> 'b = "%apply"
 
 let opt_param name param =
   match param with
@@ -33,7 +34,7 @@ let string_of_timestamp t =
   let s = string_of_float t in
   String.sub s 0 (String.length s - 1)
 
-let make_timestamp = Unix.time
+let make_timestamp = OS.Clock.time
 
 let make_nonce () =
   "kYjzVBB8Y0ZFabxSWbWovY3uYSQ2pTgmZeNu2VS4cg"
