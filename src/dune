@@ -1,0 +1,4 @@
+(executable
+ (name twitter)
+ (public_name twitter)
+ (libraries lwt mirage-http cohttp-mirage uri re cryptokit))

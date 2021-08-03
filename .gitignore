@@ -1,4 +1,4 @@
-src/_build
+_build
 src/main.native
 src/mir-www
 src/main.ml
